@@ -5,3 +5,8 @@ all: fmt
 .PHONY: fmt
 fmt:
 	rustfmt -l src/*.rs
+	cargo clippy
+
+.PHONY: clean
+clean:
+	cargo clean
