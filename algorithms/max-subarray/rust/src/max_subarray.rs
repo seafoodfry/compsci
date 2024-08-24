@@ -31,7 +31,7 @@ where
     for start in 0..nums.len() {
         let mut current_sum = N::default();
 
-        for end in start..nums.len() {
+        for (end, _) in nums.iter().enumerate().skip(start) {
             current_sum += nums[end];
             if current_sum > max_result.sum {
                 max_result = SubArrayResult {
